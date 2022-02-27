@@ -89,50 +89,51 @@ class MobileNavBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
       child: Container(
-        child: Column(
-          children: [
-            Text(
-              "Prastyo Bimbel",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Color.fromRGBO(19, 162, 176, 1),
-                fontSize: 30,
-              ),
+        child: Column(children: [
+          Text(
+            "Prastyo Bimbel",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Color.fromRGBO(19, 162, 176, 1),
+              fontSize: 30,
             ),
-            Padding(
-              padding: const EdgeInsets.all(12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
+          ),
+          Padding(
+            padding: const EdgeInsets.all(12),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Text(
                     "Beranda",
                     style: TextStyle(
                       color: Color.fromRGBO(19, 162, 176, 1),
                     ),
                   ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Text(
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Text(
                     "Tentang Kami",
                     style: TextStyle(
                       color: Color.fromRGBO(19, 162, 176, 1),
                     ),
                   ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Text(
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Text(
                     "Para Alumni",
                     style: TextStyle(
                       color: Color.fromRGBO(19, 162, 176, 1),
                     ),
                   ),
-                ],
-              ),
-            )
-          ]
-        ),
+                ),
+              ],
+            ),
+          )
+        ]),
       ),
     );
   }

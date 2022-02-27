@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatelessWidget {
@@ -6,8 +7,9 @@ class LandingPage extends StatelessWidget {
       Container(
         width: width,
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(
+          AutoSizeText(
             "Bimbingan Belajar \nPemrogaman",
+            maxLines: 2,
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 40,
@@ -34,7 +36,9 @@ class LandingPage extends StatelessWidget {
                 ),
                 child: Text(
                   "Fasilitas Kami",
-                  style: TextStyle(color: Color.fromRGBO(19, 162, 176, 1),),
+                  style: TextStyle(
+                    color: Color.fromRGBO(19, 162, 176, 1),
+                  ),
                 ),
               ),
               shape: RoundedRectangleBorder(
